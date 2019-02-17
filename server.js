@@ -46,7 +46,6 @@ app.get('/authors', function (req, res){
             res.json({message: "Success", data: authors})
          }
     })
-
 });
 
 //create a author, post route
@@ -129,7 +128,6 @@ app.post('/quotes/destroy/:author_id', function (request, res){
             res.json({message: "Success", data: author})
         }
     })
-
 });
 
 //Retrieve a Author by ID
@@ -145,7 +143,6 @@ app.get('/authors/:id', function (request, res){
             res.json({message: "Success", data: authors})
         }
     })
-
 });
 
 //edit author: Update an Author by ID
@@ -178,7 +175,6 @@ app.delete('/authors/destroy/:id', function (request, res){
             res.json({message: "Success", data: author})
         }
    })
-
 });
 
 app.all("*", (req,res,next) => {
