@@ -103,7 +103,7 @@ app.post('/quotes/downvote/:author_id', function (request, res){
         id = request.params.author_id;
 
         Author.update({_id:id, 'quotes._id': request.body.quote_id}, {$inc: {'quotes.$.vote': -1}},  { runValidators: true }, function(err, author) {
-        //Model.update({ _id: doc._id }, { $inc: { age: 1 } }, function(error, rawResponse) {
+        
         if(err){
             console.log("could not update author in server", err);
             res.json({message: "Error in server", error: err})
